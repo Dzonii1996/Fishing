@@ -1,4 +1,4 @@
-package Controller;
+package com.example.demo.daoModel;
 
 public class AddUserRequest {
     private  String name;

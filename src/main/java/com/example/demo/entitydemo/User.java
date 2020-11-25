@@ -1,6 +1,10 @@
-package Data;
+package com.example.demo.entitydemo;
+
+import com.sun.javafx.beans.IDProperty;
 
 import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 public class User {
@@ -9,9 +13,16 @@ public class User {
     @GeneratedValue
      private  long id;
     private String firstName;
+
     private String lastName;
     private String email;
     private String password;
+
+
+
+
+
+
 
 
     public long getId() {
