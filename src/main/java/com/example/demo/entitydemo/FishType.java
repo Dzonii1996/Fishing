@@ -8,7 +8,7 @@ import javax.persistence.Id;
 @Entity
 public class FishType {
     @Id
-    @GeneratedValue  
+    @GeneratedValue
 private  String name;
 private String description;
 private  String size;

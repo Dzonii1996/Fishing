@@ -1,24 +1,53 @@
 package com.example.demo.entitydemo;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Lob;
+import javax.persistence.*;
 
 @Entity
 public class Places {
 
     @Id
     @GeneratedValue
+
+    private Long id;
     private String description;
     private String url;
     private String country;
     private String city;
-private String addres;
 
+    private String addres;
+    @OneToOne(targetEntity = User.class, mappedBy = "Places", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private User user;
+
+    @OneToOne(targetEntity = FishType.class, mappedBy = "Places", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    private FishType fishType;
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public FishType getFishType() {
+        return fishType;
+    }
+
+    public void setFishType(FishType fishType) {
+        this.fishType = fishType;
+    }
 
     @Lob
     private Byte[] image;
+
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public String getCity() {
         return city;
