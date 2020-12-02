@@ -1,8 +1,8 @@
-package com.example.demo.entitydemo;
+package com.example.demo.entity;
 
 import javax.persistence.*;
 
-@Entity
+//@Entity
 public class Places {
 
     @Id
@@ -15,10 +15,10 @@ public class Places {
     private String city;
 
     private String addres;
-    @OneToOne(targetEntity = User.class, mappedBy = "Places", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+//    @OneToOne(targetEntity = User.class, mappedBy = "Places", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private User user;
 
-    @OneToOne(targetEntity = FishType.class, mappedBy = "Places", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+//    @OneToOne(targetEntity = FishType.class, mappedBy = "Places", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private FishType fishType;
 
     public User getUser() {

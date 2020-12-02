@@ -1,4 +1,4 @@
-package com.example.demo.controlerdemo;
+package com.example.demo.controler;
 
 public class EmployeeNotFoundException extends RuntimeException {
     public EmployeeNotFoundException(Long id) {
