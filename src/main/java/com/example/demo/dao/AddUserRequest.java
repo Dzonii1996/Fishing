@@ -1,4 +1,4 @@
-package com.example.demo.daoModel;
+package com.example.demo.dao;
 
 //public class AddUserRequest {
 //    private  String name;

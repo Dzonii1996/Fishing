@@ -1,11 +1,11 @@
-package com.example.demo.entitydemo;
+package com.example.demo.entity;
 
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
-@Entity
+//@Entity
 public class FishType {
     @Id
     @GeneratedValue
